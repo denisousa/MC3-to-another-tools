@@ -16,6 +16,10 @@ SourcererCC/clone-detector/backup_output
 *.so
 *.dylib
 
+/projecst/*
+# Ignore all files in the project directory
+/projects/**
+# Ignore all files in subdirectories of the project directory
 # Compiled Static libraries
 *.lai
 *.la
