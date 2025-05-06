@@ -1,0 +1,61 @@
+results.pairs
+result-pairs.csv
+clone_group.txt
+SourcererCC/clone-detector/backup_gtpm
+SourcererCC/clone-detector/lib/*
+SourcererCC/clone-detector/backup_output
+SourcererCC/clone-detector/backup_output
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.class
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+
+# mac os files
+## generic files to ignore
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
+
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+*.idx
+*.orig
+build/
+build/*
+debug/
+local.properties
+.classpath
+.settings/
+.loadpath
+
+
+# PDT-specific
+.buildpath
+
+index/*
+dist/*
+fwdindex/*
+index_nofilter/*
+output*
+/bin/
