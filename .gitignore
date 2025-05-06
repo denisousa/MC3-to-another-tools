@@ -5,6 +5,14 @@ SourcererCC/clone-detector/backup_gtpm
 SourcererCC/clone-detector/lib/*
 SourcererCC/clone-detector/backup_output
 SourcererCC/clone-detector/backup_output
+*__pycache__*
+
+*blocks_tokens*
+*file_block_stats*
+*bookkeeping_projs*
+*logs*
+*projects-list.txt*
+
 
 # Compiled Object files
 *.slo
