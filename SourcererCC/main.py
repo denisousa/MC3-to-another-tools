@@ -3,8 +3,11 @@ from extract_code import execute_extraction
 import zipfile
 import shutil
 
-def delete_unzip_folders():
+def delete_projects_in_unzip_folders():
     for item in os.listdir(projects_unzip):
+        if item == '.gitkeep':
+            continue
+        
         item_path = os.path.join(projects_unzip, item)
 
         if os.path.isdir(item_path):
@@ -93,6 +96,6 @@ os.system('sudo rm -rf tokenizers/block-level/repository')
 
 execute_extraction()
 
-# delete_unzip_folders()
+delete_projects_in_unzip_folders()
 
 print("="*15 + "FINISH" + "="*15)
