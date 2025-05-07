@@ -93,6 +93,4 @@ os.system('sudo rm -rf tokenizers/block-level/repository')
 execute_extraction()
 print('Sucess Extraction')
 
-delete_projects_in_unzip_folders('projects_unzip')
-
 print("="*15 + "FINISH" + "="*15)
