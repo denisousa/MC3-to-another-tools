@@ -4,8 +4,12 @@ clone_group.txt
 SourcererCC/clone-detector/backup_gtpm
 SourcererCC/clone-detector/lib/*
 SourcererCC/clone-detector/backup_output
-SourcererCC/clone-detector/backup_output
+SourcererCC/projects/
+SourcererCC/projects_unzip/
+SourcererCC/tokenizers/block-level/repository
 *__pycache__*
+
+*.venv*
 
 *blocks_tokens*
 *file_block_stats*
@@ -14,13 +18,7 @@ SourcererCC/clone-detector/backup_output
 *projects-list.txt*
 
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.class
-
-# Compiled Dynamic libraries
+ynamic libraries
 *.so
 *.dylib
 
@@ -65,8 +63,6 @@ local.properties
 # PDT-specific
 .buildpath
 
-index/*
-dist/*
 fwdindex/*
 index_nofilter/*
 output*
