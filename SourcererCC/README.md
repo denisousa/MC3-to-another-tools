@@ -1,5 +1,11 @@
 
 # NEW README
+Crie uma pasta chamada "projects" coloque seu código zipado e execute main.py
+
+Talvez o comando abaixo gere problemas, então instale na mão!
+pip install -r requirements.txt
+
+
 python -m venv .venv
 pip install -r requirements.txt
 source .venv/bin/activate
@@ -16,6 +22,8 @@ Esse arquivo irá executar toda a pipeline para utilizar o SourcererCC:
 Os resultados gerados pelo SourcererCC podem ser encontrados nos arquivos results.pairs, result-pairs.csv e clone_group.txt
 
 Além disso os arquivos são descompatados na pasta projects_unzip
+
+
 
 
 ## COMO INTERPRETAR O results.pairs
