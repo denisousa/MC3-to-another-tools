@@ -2,12 +2,25 @@ results.pairs
 result-pairs.csv
 clone_group.txt
 SourcererCC/clone-detector/backup_gtpm
-SourcererCC/clone-detector/lib/*
+SourcererCC/clone-detector/fwdindex
+SourcererCC/clone-detector/index
+SourcererCC/clone-detector/gtpmindex
 SourcererCC/clone-detector/backup_output
+SourcererCC/clone-detector/input/dataset/
 SourcererCC/projects/
 SourcererCC/projects_unzip/
 SourcererCC/tokenizers/block-level/repository
 *__pycache__*
+
+Log*
+NODE*
+query*
+input/dataset/*
+*.scc
+*.log
+dist*
+SCC_LOGS*
+
 
 *.venv*
 

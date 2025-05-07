@@ -5,9 +5,7 @@ import shutil
 
 def delete_projects_in_unzip_folders():
     for item in os.listdir(projects_unzip):
-        if item == '.gitkeep':
-            continue
-        
+
         item_path = os.path.join(projects_unzip, item)
 
         if os.path.isdir(item_path):
@@ -51,11 +49,18 @@ def generate_project_list_and_copy_zips(source_directory, output_directory):
         print(f"An error occurred: {error}")
 
 
-os.system('sudo chown -R denis:denis /home/denis/SourcererCC')
-os.system('sudo chmod -R u+w /home/denis/SourcererCC')
+os.makedirs('projects', exist_ok=True)
+os.makedirs('projects_unzip', exist_ok=True)
+os.makedirs('SourcererCC/clone-detector/input/dataset/', exist_ok=True)
+os.makedirs('SourcererCC/tokenizers/block-level/repository', exist_ok=True)
+
+os.system('sudo chmod -R 777 ../SourcererCC')
 
 os.system('cd tokenizers/block-level && sudo ./cleanup.sh')
 os.system('cd clone-detector && sudo ./cleanup.sh')
+
+# os.system('cd tokenizers/block-level && chmod +x ./cleanup.sh && sudo ./cleanup.sh')
+# os.system('cd clone-detector && chmod +x ./cleanup.sh && sudo ./cleanup.sh')
 
 generate_project_list_and_copy_zips('projects', 'tokenizers/block-level')
 

@@ -1,5 +1,9 @@
 
 # NEW README
+python -m venv .venv
+pip install -r requirements.txt
+source .venv/bin/activate
+
 Coloque na pasta "projects" seus repositórios zipados (Deve ser .zip) que deseja encontrar clones de código!
 
 Em seguida execute o arquivo main.py

@@ -1,2 +1,4 @@
 javalang==0.13.0
 six==1.16.0
+pandas==1.3.3
+regex==2021.8.28
