@@ -11,6 +11,8 @@ SourcererCC/projects/
 SourcererCC/projects_unzip/
 SourcererCC/tokenizers/block-level/repository
 *__pycache__*
+SourcererCC/tokenizers/block-level/projects-list.txt
+
 
 Log*
 NODE*

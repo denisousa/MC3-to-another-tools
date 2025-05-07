@@ -3,7 +3,7 @@ from extract_code import execute_extraction
 import zipfile
 import shutil
 
-def delete_projects_in_unzip_folders():
+def delete_projects_in_unzip_folders(projects_unzip):
     for item in os.listdir(projects_unzip):
 
         item_path = os.path.join(projects_unzip, item)
@@ -51,16 +51,17 @@ def generate_project_list_and_copy_zips(source_directory, output_directory):
 
 os.makedirs('projects', exist_ok=True)
 os.makedirs('projects_unzip', exist_ok=True)
-os.makedirs('SourcererCC/clone-detector/input/dataset/', exist_ok=True)
-os.makedirs('SourcererCC/tokenizers/block-level/repository', exist_ok=True)
+os.makedirs('clone-detector/input/dataset/', exist_ok=True)
+os.makedirs('tokenizers/block-level/repository', exist_ok=True)
 
 os.system('sudo chmod -R 777 ../SourcererCC')
 
 os.system('cd tokenizers/block-level && sudo ./cleanup.sh')
 os.system('cd clone-detector && sudo ./cleanup.sh')
 
-# os.system('cd tokenizers/block-level && chmod +x ./cleanup.sh && sudo ./cleanup.sh')
-# os.system('cd clone-detector && chmod +x ./cleanup.sh && sudo ./cleanup.sh')
+
+os.system('cd tokenizers/block-level && chmod +x ./cleanup.sh && sudo ./cleanup.sh')
+os.system('cd clone-detector && chmod +x ./cleanup.sh && sudo ./cleanup.sh')
 
 generate_project_list_and_copy_zips('projects', 'tokenizers/block-level')
 
@@ -81,26 +82,17 @@ print("="*15 + "CLONE DETECTION" + "="*15)
 os.system('cd clone-detector && python3 controller.py')
 
 print("="*15 + "FORMMAT CLONES" + "="*15)
-os.system('cat clone-detector/NODE_*/output8.0/query_* > results.pairs')
+os.system('sudo cat clone-detector/NODE_*/output8.0/query_* > results.pairs')
 
 for folder in os.listdir('projects'):
-    os.system(f'unzip -oq projects/{folder} -d projects_unzip')
+    os.system(f'sudo unzip -oq projects/{folder} -d projects_unzip')
 
-source_folder = 'projects'
-projects_unzip ='projects_unzip'
-for filename in os.listdir(source_folder):
-    if filename.lower().endswith('.zip'):
-        zip_path = os.path.join(source_folder, filename)
-
-        if zipfile.is_zipfile(zip_path):
-            with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-                zip_ref.extractall(projects_unzip)
-            print(f"Descompactado: {zip_path} -> {projects_unzip}")
 
 os.system('sudo rm -rf tokenizers/block-level/repository')
 
 execute_extraction()
+print('Sucess Extraction')
 
-delete_projects_in_unzip_folders()
+delete_projects_in_unzip_folders('projects_unzip')
 
 print("="*15 + "FINISH" + "="*15)

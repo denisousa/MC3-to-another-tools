@@ -1,1 +1,1 @@
-repository/qualitas_corpus_clean.zip
+repository/eclipse.platform.ui.zip
